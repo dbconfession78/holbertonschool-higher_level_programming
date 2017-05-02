@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-i = 0
-#for i in range(0, 26):#
-while i < 26:
-    if chr(97+i) != "q" and chr(97+i) != "e":
+letter = 97
+for i in range(0, 26):
+    if chr(letter) != "q" and chr(letter) != "e":
         print(chr(97+i), end='')
-    i = i + 1
+    letter = letter + 1
