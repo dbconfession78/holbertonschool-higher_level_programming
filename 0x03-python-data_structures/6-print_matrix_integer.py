@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-DEFAULT = object()
 def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         return None
@@ -9,4 +8,9 @@ def print_matrix_integer(matrix=[[]]):
         return
 
     for i in range(0, len(matrix)):
-        print("{}".format(matrix[i]))
+        for number in matrix[i]:
+            print("{:d}".format(number), end='')
+            if matrix[i].index(number) != len(matrix[i]) - 1:
+                print(' ', end='')
+            else:
+                print()
