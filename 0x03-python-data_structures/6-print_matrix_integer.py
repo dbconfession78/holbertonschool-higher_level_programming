@@ -3,9 +3,9 @@ def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         return None
 
-    if len(matrix[0]) == 0 and len(matrix) == 1:
-        print()
-        return
+#    if len(matrix[0]) == 0 and len(matrix) == 1:
+#        print()
+#        return
 
     for i in range(0, len(matrix)):
         for number in matrix[i]:
