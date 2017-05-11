@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def best_score(my_dict):
     winner = ""
-    high = 0
+    high = -1
 
     if my_dict is None:
         return
@@ -12,4 +12,6 @@ def best_score(my_dict):
         if (my_dict[key] > high):
             high = my_dict[key]
             winner = key
+    if high == -1:
+        return None
     return winner
