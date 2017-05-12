@@ -8,6 +8,7 @@ The focus of this project is to learn:
 * how to raisea builtin expression
 * when implementing a clean-up action is neccessary after catching an exception
 
+##Environment
 * __Environment:__ Ubuntu 14.04 LTS
 * __python3 version:__ 3.4.3
 * __style:__ PEP 8
