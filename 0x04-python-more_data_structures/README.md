@@ -7,8 +7,8 @@ The focus of this project is to learn and understand how to use dictionaries and
 * __python3 version:__ 3.4.3
 * __style:__ PEP 8
 
-## New commands / functions used:
-TODO 
+## New concepts / commands / functions used:
+``enumerate``, ``list.append()``, ``set.add()``, ``sorted(<dictionary>)``, ``dictionary.pop()``, ``map()``, ``lambda``
 
 ## Helpful Links
 * http://www.python-course.eu/python3_lambda.php
@@ -27,6 +27,10 @@ TODO
 - `9-multiply_by_2.py`: takes a dictionary and creates a new one whose values are those of the original multipled by 2
 - `10-best_score.py`: finds the key with the biggest integer value
 - `11-mutiply_list_map.py`: takes a list and creates a new list whose values are those of the original multipled by 2 (without using any loops)
+- `100-weight_average.py`: returns the weighted average of all integers tuple
+- `101-square_matrix_map.py`: conmputes the square value of all integers in a matrix using map
+- `102-complex_delete.py
+- `102-complex_delete.py`: deletes keys with a specific value in a dictionary
 
 
 ## Author
