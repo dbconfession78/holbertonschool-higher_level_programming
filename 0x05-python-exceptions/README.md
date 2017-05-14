@@ -13,9 +13,8 @@ The focus of this project is to learn:
 * __python3 version:__ 3.4.3
 * __style:__ PEP 8
 
-## New commands / functions used:
-TODO
-
+## New concepts / commands used:
+``try``, ``exept``, ``finally``, ``else``, ``raise``,``Exception``, ``ValueError``, ``TypeError``, ``NameError``, ``IndexError``
 ## Helpful Links
 * https://docs.python.org/3.4/tutorial/errors.html
 * https://www.youtube.com/watch?v=7vbgD-3s-w4
