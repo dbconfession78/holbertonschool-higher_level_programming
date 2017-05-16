@@ -1,0 +1,63 @@
+The ``add_integer`` Module
+==========================
+
+Using ``add_intger``
+--------------------
+
+Import add_integer:
+      >>> add_integer = __import__("0-add_integer").add_integer
+
+Check for documentation:
+      >>> doc_mod = __import__("0-add_integer").__doc__
+      >>> print(len(doc_mod) > 1)
+      True
+
+      >>> doc_func = __import__("0-add_integer").add_integer.__doc__
+      >>> print(len(doc_func) > 0)
+      True
+
+Correct Use:
+
+        >>> add_integer(10, 20)
+        30
+
+        >>> add_integer(10, -20)
+        -10
+
+        >>> add_integer(10.1, -20)
+        -10
+
+        >>> add_integer(-10.1, -20)
+        -30
+
+        >>> add_integer(2**2, -10)
+        -6
+
+        >>> add_integer(2**2.3, 10)
+        14
+
+Error handling:
+        >>> add_integer("Hello", 5)
+        ...
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+        >>> add_integer("Hello", "World")
+        ...
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+        >>> add_integer(None, 2)
+        ...
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+        >>> add_integer([1,2,3], 2)
+        ...
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+        >>> add_integer(function(), 2)
+        ...
+        Traceback (most recent call last):
+        NameError: name 'function' is not defined
