@@ -3,8 +3,6 @@
 Module: 3-say_my_name
 prints "My name is" followed by a first and last name
 """
-import sys
-
 
 def say_my_name(first_name, last_name=""):
     """
