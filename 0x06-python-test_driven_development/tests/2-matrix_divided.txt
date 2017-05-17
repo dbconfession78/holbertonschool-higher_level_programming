@@ -1,0 +1,104 @@
+``The matrix_divided module``
+=============================
+
+Import modules:
+       >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Check for documentation:
+      >>> doc_mod = __import__("2-matrix_divided").__doc__
+      >>> print(len(doc_mod) > 0)
+      True
+
+      >>> doc_func = __import__("2-matrix_divided").matrix_divided.__doc__
+      >>> print(len(doc_func) > 0)
+      True
+
+Use cases:
+
+        # print the matrix
+        >>> matrix = [[1,2,3], [4,5,6]]
+        >>> print(matrix)
+        [[1, 2, 3], [4, 5, 6]]
+
+        >>> matrix_divided([[1,2,3], [4,5,6]], 3)
+        [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+        # input list with mixed int and div = float
+        >>> matrix_divided([[1,2.2,3], [4.4,5,6]], 3)
+        [[0.33, 0.73, 1.0], [1.47, 1.67, 2.0]]
+
+        # input of int/float matrix and div = float
+        >>> matrix_divided([[1,2.2,3], [4.4,5,6]], -3.4)
+        [[-0.29, -0.65, -0.88], [-1.29, -1.47, -1.76]]
+
+        # input of int/float matrix and div = bool
+        >>> matrix_divided([[1,2.2,3], [4.4,5,6]], True)
+        [[1.0, 2.2, 3.0], [4.4, 5.0, 6.0]]
+
+        # input of single int/float matrix
+        >>> matrix_divided([[1,2.2,3]], 3)
+        [[0.33, 0.73, 1.0]]
+
+        # matrix includes True and False
+        >>> matrix_divided([[True, False], [1, 0]], 2)
+        [[0.5, 0.0], [0.5, 0.0]]
+
+
+Error handling:
+
+      # matrix has string
+      >>> matrix_divided([[1, "Hello", 3], ["World", 5, 6]], 3)
+      ...
+      Traceback (most recent call last):
+      TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+       >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "Hello")
+       ...
+       Traceback (most recent call last):
+       TypeError: div must be a number
+
+       # input of div = 0
+       >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+       ...
+       Traceback (most recent call last):
+       ZeroDivisionError: division by zero
+
+       # uneven lists
+       >>> matrix_divided([[1, 3], [4, 5, 6]], 3)
+       ...
+       Traceback (most recent call last):
+       TypeError: Each row of the matrix must have the same size
+
+       # matrix is None
+       >>> matrix_divided(None, 3)
+       ...
+       Traceback (most recent call last):
+       TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+       >>> matrix_divided([], 3)
+       ...
+       Traceback (most recent call last):
+       TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+       >>> matrix_divided([[]], 3)
+       ...
+       Traceback (most recent call last):
+       TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+       # True is passed instead of matrix
+       >>> matrix_divided(True, 2)
+       ...
+       Traceback (most recent call last):
+       TypeError: object of type 'bool' has no len()
+
+        # extra args
+        >>> matrix_divided(matrix, 2, "well hello there")
+        ...
+        Traceback (most recent call last):
+        TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
+        # no arguments
+        >>> matrix_divided()
+        ...
+        Traceback (most recent call last):
+        TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
