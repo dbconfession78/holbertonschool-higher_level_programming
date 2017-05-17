@@ -41,6 +41,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_set_in_list(self):
         self.assertEqual(max_integer([{2, 3}, {3, 4}]), {2, 3})
 
+    def test_max_in_middle(self):
+        self.assertEqual(max_integer([2, 90, 4]), 90)
+
 
 class ExpectedFailureCase(unittest.TestCase):
 
