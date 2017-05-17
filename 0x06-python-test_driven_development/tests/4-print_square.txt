@@ -66,3 +66,7 @@ Error handling:
     >>> print_square(None)
     Traceback (most recent call last):
     TypeError: size must be an integer
+
+     >>> print_square("square")
+     Traceback (most recent call last):
+     TypeError: size must be an integer
