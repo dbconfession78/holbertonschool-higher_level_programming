@@ -29,6 +29,9 @@ Use cases:
     >>> say_my_name("Stuart G.", "Kuredjian")
     My name is Stuart G. Kuredjian
 
+    >>> say_my_name("John", )
+    My name is John
+
 Error handling:
       >>> say_my_name()
       Traceback (most recent call last):
@@ -43,6 +46,11 @@ Error handling:
       ...
       Traceback (most recent call last):
       TypeError: last_name must be a string
+
+      >>> say_my_name(2, 2)
+      ...
+      Traceback (most recent call last):
+      TypeError: first_name must be a string
 
       >>> say_my_name("John", "M.", "Smith")
       ...
