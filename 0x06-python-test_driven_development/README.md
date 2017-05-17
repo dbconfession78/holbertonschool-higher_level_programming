@@ -30,8 +30,8 @@ The focus of this project is to learn:
 - `3-say_my_name.txt`: interactive test cases for say_my_name() function
 - `4-print_square.py`: prints a square using the '#' character
 - `4-print_square.txt`: interactive test cases for print_square() function
-- `5-text_indentation.py`: prints text with two new lines after every ., ? and :
-- '5-text_indentation.txt`: interactive test cases for text_indentation() function
+- `5-text_indentation.py`: prints text with two new lines after every '.', '?' and ':'
+- `5-text_indentation.txt`: interactive test cases for text_indentation() function
 - `6-max_integer_test.py`: unit test cases and expected fail cases for max_integer() function
 
 ## Author
