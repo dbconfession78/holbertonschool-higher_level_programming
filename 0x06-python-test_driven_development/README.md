@@ -13,8 +13,9 @@ The focus of this project is to learn:
 * __python3 version:__ 3.4.3
 * __style:__ PEP 8
 
-## New concepts / commands used:
-TODO
+## New concepts / functions / commands used:
+``isinstance()``, ``str.join()``, ``str.strip()``, ``str.splt()``, ``classes``, ``unit testing``,
+``unittest module``, ``__import__``, ``.assertEqual``, ``.assertIsNone``, ``@unittest.expectedFailure``
 
 ## Helpful Links
 * https://docs.python.org/3.4/library/doctest.html
@@ -22,16 +23,16 @@ TODO
 
 ## File Descriptions
 - `0-add_integer.py`: adds two integers
-- `0-add_integer.txt`: TODO
+- `0-add_integer.txt`: interactive test cases for add_integer() function
 - `2-matrix_divided.py`: divides all elemnts of a matrix
-- `2-matrix_divided.txt`: TODO
+- `2-matrix_divided.txt`: interactive test cases for matrix_divided() function
 - `3-say_my_name.py`: prints "My name is"
-- `3-say_my_name.txt`: TODO
+- `3-say_my_name.txt`: interactive test cases for say_my_name() function
 - `4-print_square.py`: prints a square using the '#' character
-- `4-print_square.txt`: TODO
+- `4-print_square.txt`: interactive test cases for print_square() function
 - `5-text_indentation.py`: prints text with two new lines after every '.', '?' and ':'
-- '5-text_indentation.txt`: TODO
-- `6-max_integer_test.py`: finds the highest integer in a list
+- '5-text_indentation.txt`: interactive test cases for text_indentation() function
+- `6-max_integer_test.py`: unit test cases and expected fail cases for max_integer() function
 
 ## Author
 Stuart Kuredjian
