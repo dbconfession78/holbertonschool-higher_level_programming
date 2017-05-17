@@ -1,10 +1,7 @@
 The ``add_integer`` Module
 ==========================
 
-Using ``add_intger``
---------------------
 
-Import add_integer:
       >>> add_integer = __import__("0-add_integer").add_integer
 
 Check for documentation:
@@ -16,48 +13,117 @@ Check for documentation:
       >>> print(len(doc_func) > 0)
       True
 
-Correct Use:
+Use csases:
 
+        # input int and int
         >>> add_integer(10, 20)
         30
 
+        # input int and neg int
         >>> add_integer(10, -20)
         -10
 
+        # input float and neg int
         >>> add_integer(10.1, -20)
         -10
 
+        # input neg float and neg int
         >>> add_integer(-10.1, -20)
         -30
 
+        #input int^int and negative int
         >>> add_integer(2**2, -10)
         -6
 
+        # input int^float and int
         >>> add_integer(2**2.3, 10)
         14
 
+        # input float and int
+        >>> add_integer(8.0, 5)
+        13
+
+        # input float and int reversed
+        >>> add_integer(8, 5.0)
+        13
+
+        # input large number
+        >>> add_integer(999999999999, 1)
+        1000000000000
+
+        # input bool and int
+        >>> add_integer(True, 45)
+        46
+
+        # input bool and bool
+        >>> add_integer(False, True)
+        1
+
+
 Error handling:
-        >>> add_integer("Hello", 5)
-        ...
-        Traceback (most recent call last):
-        TypeError: a must be an integer
 
-        >>> add_integer("Hello", "World")
-        ...
-        Traceback (most recent call last):
-        TypeError: a must be an integer
+       # input string and int
+       >>> add_integer("Hello", 5)
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
 
-        >>> add_integer(None, 2)
-        ...
-        Traceback (most recent call last):
-        TypeError: a must be an integer
+       # input two strings
+       >>> add_integer("Hello", "World")
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
 
-        >>> add_integer([1,2,3], 2)
-        ...
-        Traceback (most recent call last):
-        TypeError: a must be an integer
+       # input None and int
+       >>> add_integer(None, 2)
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
 
-        >>> add_integer(function(), 2)
-        ...
-        Traceback (most recent call last):
-        NameError: name 'function' is not defined
+       # input list and int
+       >>> add_integer([1,2,3], 2)
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+       # input function and int
+       >>> add_integer(function(), 2)
+       ...
+       Traceback (most recent call last):
+       NameError: name 'function' is not defined
+
+       # input string and int
+       >>> add_integer('hi', 6)
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+       # input int and string reversed
+       ...
+       >>> add_integer(6, 'yo')
+       Traceback (most recent call last):
+       TypeError: b must be an integer
+
+       # input None
+       >>> add_integer(None, None)
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+       # input list and int
+       >>> add_integer([1, 2, 3], 7)
+       ...
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+       # no arguments
+       >>> add_integer()
+       ...
+       Traceback (most recent call last):
+       TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+       # extra args
+       >>> add_integer(6, 2, "well hello there")
+       ...
+       Traceback (most recent call last):
+       TypeError: add_integer() takes 2 positional arguments but 3 were given
