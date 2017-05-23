@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Module 4-square
-calcualates the area of a square
+Module for Square class
 """
 
 
@@ -11,6 +10,9 @@ class Square:
     size of a square and calculate s quares are
     """
     def __init__(self, size=0):
+        """
+        initializes Square with 'size'
+        """
         self.handle_errors(size)
         self.__size = size
 
