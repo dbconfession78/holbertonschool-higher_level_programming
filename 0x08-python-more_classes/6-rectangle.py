@@ -16,6 +16,7 @@ class Rectangle:
       - repr() returns a string representation of the rectangle
         so eval() can create a new instance
       - prints "Bye rectangle..." when an instance of Rectangle is deleted
+      - increments a counter whenever a new instance of Rectangle is created
     """
 
     number_of_instances = 0
@@ -26,6 +27,7 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """
@@ -45,6 +47,7 @@ class Rectangle:
         """
         prints a message when an instancer of Rectangle is deleted
         """
+        self.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
