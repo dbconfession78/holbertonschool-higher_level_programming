@@ -49,7 +49,7 @@ Error handling:
     Traceback (most recent call last):
     ValueError: size must be >= 0
 
-    # no size
+    # call priavte
     >>> print(square.__size)
     ...
     Traceback (most recent call last):
@@ -65,7 +65,7 @@ Error handling:
     {'_Square__size': 5}
 
     # class init 'size' as string
-    >>> new_square = Square("25 Feet")
+    >>> new_square = Square("300")
     ...
     Traceback (most recent call last):
     TypeError: size must be an integer
