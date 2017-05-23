@@ -15,6 +15,9 @@ Check for documentation:
 
 Use cases
 
+    # size is large int
+    square = Square(100000000000000000000000000000000000000000000000000000)
+
     # size as 0:
     >>> square = Square()
     >>> print("{:d}".format(square.size))
