@@ -30,8 +30,8 @@ class Rectangle:
         this returns rectangle ASCII using '#'
         """
         string = ""
-#        if self.__width == 0 or self.__height == 0:
-#            return string
+        if self.__width == 0 or self.__height == 0:
+            return string
         string = (("#" * self.__width) + "\n") * self.__height
         return string[:-1]
 
