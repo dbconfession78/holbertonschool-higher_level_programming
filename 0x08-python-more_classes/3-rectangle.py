@@ -92,14 +92,6 @@ class Rectangle:
         if width < 0:
             raise ValueError("width must be >= 0")
 
-    @classmethod
-    def print(self):
-        input()
-
-    def str(self):
-        input()
-        pass
-
     def handle_height_errors(self, height):
         """
         raises an error if height isn't a positive integer
