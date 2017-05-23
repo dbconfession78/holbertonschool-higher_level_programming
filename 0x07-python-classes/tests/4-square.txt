@@ -18,21 +18,21 @@ Use cases
     # size is large int
     square = Square(100000000000000000000000000000000000000000000000000000)
 
-    # size as 0:
+    # initialize without any size:
     >>> square = Square()
     >>> print("{:d}".format(square.size))
     0
     >>> print('{}'.format(square.area()))
     0
 
-    # initialize class's size with positive int
+    # initialize class with positive int
     >>> square = Square(25)
     >>> print("{:d}".format(square.size))
     25
     >>> print('{}'.format(square.area()))
     625
 
-    # size as int
+    # set int
     >>> square.size = 5
     >>> print("{:d}".format(square.size))
     5
