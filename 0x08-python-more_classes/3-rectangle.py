@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 3-rectangle
+Module 4-rectangle
 provides several methods pertainning to the size of a rectangle
 """
 
@@ -23,6 +23,10 @@ class Rectangle:
         self.__height = height
 
     def __str__(self):
+        """
+        if class instance is arg of print(),
+        this returns rectangle ASCII using '#'
+        """
         string = ""
         if self.__width == 0 or self.__heigth == 0:
             return string
