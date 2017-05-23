@@ -1,0 +1,60 @@
+The 4-square module
+======================
+
+Import module:
+       >>> Square = __import__("4-square").Square
+
+Check for documentation:
+      >>> doc_mod = __import__("4-square").__doc__
+      >>> print(len(doc_mod) > 0)
+      True
+
+      >>> doc_class = __import__("4-square").Square.__doc__
+      >>> print(len(doc_class) > 0)
+      True
+
+Use cases
+
+    # size as 0:
+    >>> square = Square()
+    >>> print("{:d}".format(square.size))
+    0
+    >>> print('{}'.format(square.area()))
+    0
+
+    # initialize class's size  with positive int
+    >>> my_square = Square(25)
+    >>> print("{:d}".format(my_square.size))
+    25
+    >>> print('{}'.format(my_square.area()))
+    625
+
+    # size as int
+    >>> my_square.size = 5
+    >>> print("{:d}".format(my_square.size))
+    5
+    >>> print('{:d}'.format(my_square.area()))
+    25
+
+Error handling:
+    # size as string
+    >>> my_square.size = "some_words"
+    ...
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    # size negative
+    >>> my_square.size = -5
+    ...
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    # no size
+    >>> print(my_square.__size)
+    ...
+    Traceback (most recent call last):
+    AttributeError: 'Square' object has no attribute '__size'
+
+    # ???
+    >>> print(my_square.__dict__)
+    {'_Square__size': 5}
