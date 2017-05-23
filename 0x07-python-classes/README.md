@@ -23,7 +23,7 @@ The focus of this project is to learn:
 * __style:__ PEP 8
 
 ## New concepts / functions / commands used:
-`` TODO ``:
+`` class``, ``pass``, ``__init__``, ``self``, ``__variable``, ``@property``, ``setter``, ``getter`` :
 ## Helpful Links
 * https://python.swaroopch.com/oop.html
 * http://www.python-course.eu/python3_object_oriented_programming.php
