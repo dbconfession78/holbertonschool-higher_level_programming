@@ -37,6 +37,10 @@ class Rectangle:
         return string[:-1]
 
     def __repr__(self):
+        """
+        returns string representation of a Rectangle
+        so eval() can create a new instance of Rectangle
+        """
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
