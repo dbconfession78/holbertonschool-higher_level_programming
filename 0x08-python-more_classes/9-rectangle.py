@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 9OA-rectangle
+Module 9-rectangle
 provides several methods pertainning to the size of a rectangle
 """
 
@@ -31,8 +31,8 @@ class Rectangle:
         """
         initializes Rectangle with optional width and height
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     def __str__(self):
