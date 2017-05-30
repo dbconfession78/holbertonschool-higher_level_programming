@@ -37,7 +37,19 @@ The focus of this project is to learn:
 * http://t3.gstatic.com/images?q=tbn:ANd9GcQUM0y6bxv-QJg-5SvHrf-HBUBTaid1QFxl_gJtGZisbziNydzn
 
 ## File Descriptions
-`TODO`:
+`0-lookup.py`: returns a list of available attributes and methods of an object
+`1-my_list.py`: class `MyList` that inherits from `list`
+`2-is_same_class.py`: determines if an object is exactly an instance of the specified class
+`3-is_kind_of_class.py`: determines if an object is an instance of a specified class or is a class instance that inherited from the specified class
+`4-inherits_from.py`: determines if an object is an instance of a class that inherited (directl\
+      y or indirectly) from the speciied class
+`5-base_geometry.py`: empty class BaseGeometry
+`6-base_geometry`: raises an `Exception` with the message "area() is not implemented"
+`7-base_geometry.py`: function `integer_validator()`: raises `TypeError` execption "<name> must be greater than 0" if `value` is not an integer
+`8-rectangle.py`: class `Rectangle` that inherits from `BaseGeometry`
+`9-rectangle.py`: returns the rectangle description: [Rectangle] <`width`>/<`height`>
+`10-square.py`: inherits from `Rectangle`
+`11-square.py`: returns the square desciption: [`Square`] <`width`>/<`height`>
 
 ## Author
 Stuart Kuredjian
