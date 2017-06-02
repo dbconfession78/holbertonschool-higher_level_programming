@@ -12,7 +12,7 @@ class Rectangle(BaseGeometry):
       - `width` and `height` must be positive integers validated by
         `integer_validator`
     """
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height):
         """
         uses the superclass method, integer_validtaor() to
         confirm 'width' and 'height' are both positive integers
