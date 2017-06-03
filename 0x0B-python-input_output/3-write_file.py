@@ -10,7 +10,7 @@ def write_file(filename="", text=""):
     """
     chars = 0
 
-    with open("my_first_file.txt", mode="w", encoding="utf-8") as _file:
+    with open(filename, mode="w", encoding="utf-8") as _file:
         chars = _file.write(text)
 
         return chars
