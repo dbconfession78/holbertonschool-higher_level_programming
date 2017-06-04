@@ -21,7 +21,6 @@ class Student(object):
 
     def to_json(self):
         """
-        returns a class dict whose values
-        have been stripped of '_Student__'
+        returns dict of 'Student' class attributes
         """
         return (self.__dict__)
