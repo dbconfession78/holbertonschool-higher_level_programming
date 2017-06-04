@@ -11,5 +11,4 @@ def class_to_json(obj):
     JSON serialization of an object
     """
 
-    if type(obj):
-        return obj.__dict__
+    return obj.__dict__
