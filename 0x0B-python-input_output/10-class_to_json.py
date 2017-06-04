@@ -11,6 +11,4 @@ def class_to_json(obj):
     JSON serialization of an object
     """
 
-    if obj is None:
-        return {}
     return(obj.__dict__)
