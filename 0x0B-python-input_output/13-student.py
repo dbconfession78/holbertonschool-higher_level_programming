@@ -43,9 +43,9 @@ class Student(object):
         @json: dict of new attributes
         Return: n/a
         """
-        self.__last_name = json["last_name"]
-        self.__first_name = json["first_name"]
-        self.__age = json["age"]
+        self.last_name = json["last_name"]
+        self.first_name = json["first_name"]
+        self.age = json["age"]
 
     @property
     def first_name(self):
