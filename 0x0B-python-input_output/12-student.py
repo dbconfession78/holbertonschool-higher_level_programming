@@ -25,13 +25,11 @@ class Student(object):
         @attrs: list of requested dictionary attributes
         Return: complete dict if attrs is None; only items in attrs otherwise
         """
-        class_dict = self.__dict__
         new_dict = {}
-        for key in class_dict.keys():
-            if attrs is not None:
-                if key in attrs:
-                    new_dict[key] = class_dict[key]
-            else:
-                new_dict[key] = class_dict[key]
+        if attrs is None:
+            return self.__dict__
+        for elem in attrs:
+            if elem in self.__dict__:
+                new_dict[elem] = self.__dict__[elem]
 
         return new_dict
