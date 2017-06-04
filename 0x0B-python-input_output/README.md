@@ -30,7 +30,7 @@ The focus of this project is to learn:
 
 
 ## New concepts / functions / commands used:
-``TODO``:
+``with``, ``open``, ``encoding``, ``as``, ``read``, ``seek``, ``write``, ``<file>.closed``, ``json.dumps``, ``json.loads``, ``json.load``, ``__dict__``
 
 ## Helpful Links
 * https://docs.python.org/3.4/tutorial/inputoutput.html#reading-and-writing-files
