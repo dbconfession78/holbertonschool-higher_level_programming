@@ -21,20 +21,17 @@ class Student(object):
 
     def to_json(self, attrs=None):
         """
-        returns a class dict. whose values are stripped of '_Student__'
-        @attrs: list of requested dictionary items
-        Return: complete dict if attrs is None; only items in attrs otherwise
+        returns dict of 'Student' class attributes with option to filter
+        @attrs: list of requested dictionary attributes
+        Return: dict of optionally filtered class attributes
         """
-        class_dict = self.__dict__
         new_dict = {}
-        for key in class_dict.keys():
-            _key = key[10:]
-            if attrs is not None:
-                if _key in attrs:
-                    new_dict[_key] = class_dict[key]
-            else:
-                new_dict[_key] = class_dict[key]
 
+        if attrs is None:
+            return self.__dict__
+        for elem in attrs:
+            if elem in self.__dict__:
+                new_dict[elem] = self.__dict_[elem]
         return new_dict
 
     def reload_from_json(self, json):
@@ -43,48 +40,5 @@ class Student(object):
         @json: dict of new attributes
         Return: n/a
         """
-        self.last_name = json["last_name"]
-        self.first_name = json["first_name"]
-        self.age = json["age"]
-
-    @property
-    def first_name(self):
-        """
-        first_name getter
-        """
-        return self.__first_name
-
-    @first_name.setter
-    def first_name(self, first_name):
-        """
-        first_name setter
-        """
-        self.__first_name = first_name
-
-    @property
-    def last_name(self):
-        """
-        last_name getter
-        """
-        return self.__last_name
-
-    @last_name.setter
-    def last_name(self, last_name):
-        """
-        last_name setter
-        """
-        self.__last_name = last_name
-
-    @property
-    def age(self):
-        """
-        age getter
-        """
-        return self.__age
-
-    @age.setter
-    def age(self, age):
-        """
-        age setter
-        """
-        self.__age = age
+        for elem in json:
+            self.__dict__[elem] = json[elem]
