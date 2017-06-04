@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module: 11-student
+Module: 12-student
 """
 
 
@@ -21,8 +21,9 @@ class Student(object):
 
     def to_json(self, attrs=None):
         """
-        returns a class dict whose values
-        have been stripped of '_Student__'
+        returns a class dict. whose values are stripped of '_Student__'
+        @attrs: list of requested dictionary items
+        Return: complete dict if attrs is None; only items in attrs otherwise
         """
         class_dict = self.__dict__
         new_dict = {}
