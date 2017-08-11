@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" lists all states starting with 'N' from the selected db"""
+""" lists all states starting with 'N' from the selected db """
 
 
 def main():
