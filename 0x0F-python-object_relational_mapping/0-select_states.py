@@ -12,6 +12,7 @@ def main():
 
     db = MySQLdb.connect(
         host="localhost",
+        port=3306,
         user="{}".format(username),
         password="{}".format(password),
         db="{}".format(db_name))
