@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-# lists all the states from the db hbtn_0e_0_usa
-import MySQLdb
-import sys
+""" lists all the states from the db hbtn_0e_0_usa """
 
 
 def main():
+    import MySQLdb
+    import sys
+
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
