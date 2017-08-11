@@ -13,6 +13,7 @@ def main():
         db_name = sys.argv[3]
 
         db = MySQLdb.connect(
+            host="localhost",
             user="{}".format(username),
             password="{}".format(password),
             db="{}".format(db_name))
