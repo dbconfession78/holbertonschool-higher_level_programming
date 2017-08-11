@@ -18,14 +18,12 @@ def main():
         db=db_name)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
-    results = cur.fetchall()
-    for result in results:
-        print("{}".format(result))
-#    n_state = cur.fetchone()
-#    while(n_state):
-#        print(n_state)
-#        n_state = cur.fetchone()
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id \
+    ASC")
+    n_state = cur.fetchone()
+    while(n_state):
+        print(n_state)
+        n_state = cur.fetchone()
 
     cur.close()
     db.close()
