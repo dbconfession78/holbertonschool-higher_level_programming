@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" injection-safe script that takes an state name as arg and lists
-all cities of that state  """
+""" lists all cities from the selected db  """
 
 
 def main():
