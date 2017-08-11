@@ -7,15 +7,15 @@ def main():
     import sys
 
     username = sys.argv[1]
-    password = sys.argv[2]
+    passwd = sys.argv[2]
     db_name = sys.argv[3]
 
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user="{}".format(username),
-        password="{}".format(password),
-        db="{}".format(db_name))
+        user=username,
+        password=passwd,
+        db=db_name)
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
@@ -24,8 +24,6 @@ def main():
     while (line):
         print(line)
         line = cur.fetchone()
-#    states = cur.fetchall()
-#     for (i, state) in enumerate(states):
 
 if __name__ == "__main__":
     main()
