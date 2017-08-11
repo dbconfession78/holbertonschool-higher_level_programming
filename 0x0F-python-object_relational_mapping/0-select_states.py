@@ -2,7 +2,7 @@
 """ lists all the states from the db hbtn_0e_0_usa """
 
 
-def main():
+if __name__ == "__main__":
     import MySQLdb
     import sys
 
@@ -24,6 +24,3 @@ def main():
     while (line):
         print(line)
         line = cur.fetchone()
-
-if __name__ == "__main__":
-    main()
