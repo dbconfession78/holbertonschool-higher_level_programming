@@ -18,9 +18,12 @@ def main():
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-    states = cur.fetchall()
-    for (i, state) in enumerate(states):
-        print(states[i])
+    line = cur.fetchone()
+    while (line):
+        print(line)
+        line = cur.fetchone()
+#    states = cur.fetchall()
+#     for (i, state) in enumerate(states):
 
 if __name__ == "__main__":
     main()
