@@ -17,12 +17,11 @@ def main():
 
     engine = create_engine("mysql://{}:{}@localhost/{}".format(
         username, passwd, db_name))
-#    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
     state = session.query(State.id).filter(
-         State.name.like("%{}%".format(state_arg)))
+         State.name == state_arg)
     if state.first() is None:
         print("Not found")
     else:
