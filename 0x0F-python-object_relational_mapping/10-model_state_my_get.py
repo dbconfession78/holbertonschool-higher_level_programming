@@ -15,7 +15,7 @@ def main():
     db_name = argv[3]
     state_arg = argv[4]
 
-    engine = create_engine("mysql://{}:{}@localhost/{}".format(
+    engine = create_engine("mysql://{}:{}@localhost:3306/{}".format(
         username, passwd, db_name))
 
     Session = sessionmaker(bind=engine)
