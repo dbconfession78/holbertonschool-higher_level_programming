@@ -22,8 +22,8 @@ def main():
     session = Session()
 
     state = session.query(State.id).filter(
-         State.name.like("%{}%".format(state_arg)))
-    if state is None:
+         State.name == state_arg)
+    if (state.first() is None):
         print("Not Found")
     else:
         print(state[0].id)
