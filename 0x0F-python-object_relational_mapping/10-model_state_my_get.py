@@ -13,10 +13,18 @@ def main():
     username = argv[1]
     passwd = argv[2]
     db_name = argv[3]
-    state_arg = argv[4]
+    state_arg = argv[4].split("'")[0]
 
-    engine = create_engine("mysql://{}:{}@localhost:3306/{}".format(
-        username, passwd, db_name))
+    if len(argv) != 5:
+        print("Usage: ./10.py <usrname> <passwd> <database> <search>")
+        exit(1)
+
+    try:
+        engine = create_engine("mysql://{}:{}@localhost:3306/{}".format(
+            username, passwd, db_name))
+    except:
+        print(err)
+        exit(1)
 
     Session = sessionmaker(bind=engine)
     session = Session()
