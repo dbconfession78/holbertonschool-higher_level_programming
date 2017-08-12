@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-deletes all State objects with a name containing the letter 'a' from selected db
+deletes all State objects w. a name containing the letter 'a' from selected db
 """
 import MySQLdb
 from sys import argv
@@ -24,7 +24,7 @@ def main():
         session.delete(state)
     session.commit()
     states = session.query(State)
-    session.close()        
+    session.close()
 
 if __name__ == "__main__":
     main()
