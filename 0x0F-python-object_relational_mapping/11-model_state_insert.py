@@ -19,11 +19,9 @@ def main():
     session = Session()
 
     new_state = State(name="Louisiana")
-    session.add_all([new_state])
+    session.add(new_state)
     session.commit()
-    states = session.query(State)
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    print(new_state.id)
 
 if __name__ == "__main__":
     main()
