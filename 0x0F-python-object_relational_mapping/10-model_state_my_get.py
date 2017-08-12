@@ -14,10 +14,10 @@ def main():
     db_name = argv[3]
     state_arg = argv[4]
 
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".
                            format(username, passwd, db_name))
-
     Base.metadata.create_all(engine)
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -25,7 +25,7 @@ def main():
         state = session.query(State).filter(State.name == state_arg).one()
         print("{}".format(state.id))
     except:
-        print("Not Found")
+        print("Not found")
     session.close()
 
 if __name__ == "__main__":
