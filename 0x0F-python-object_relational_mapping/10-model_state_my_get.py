@@ -21,20 +21,21 @@ def main():
         exit(1)
 
     try:
-        engine = create_engine("mysql://{}:{}@localhost:3306/{}".format(
-            username, passwd, db_name))
+        engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".
+                               format(username, passwd, db_name))
     except Exception as e:
         print(e)
         exit(1)
 
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State.id).filter_by(name=state_arg)
-    if query.first() is None:
-        print("Not Found")
+    try:
+        state = session.query(State).filter(State.name == state_arg).one()
+        print("{:d}".format(state.id))
     else:
-        print("{:d}".format(query[0].id))
+        print("Not Found")
     session.close()
 
 if __name__ == "__main__":
