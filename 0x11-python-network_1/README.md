@@ -32,6 +32,8 @@ The focus of this project is to learn:
 `8-json_api.py`: takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
 `9-starwars.py`: sends a search request to the Star Wars API
 `10-my_github.py`: takes your Github credentials (username and password) and uses the Github API to display your id
+`100-github_commits.py`: takes github repository name and owner to display 10 most recent commits
+`101-starwars.py`: takes in a string and sends a search request to the Star Wars API
 
 ## Author
 Stuart Kuredjian
