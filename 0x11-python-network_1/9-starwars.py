@@ -15,7 +15,7 @@ def main():
     json = r.json()
     results = json.get('results')
     names = []
-    print('Number of results: {}'.format(json.get('count')))
+    print('Number of result: {}'.format(json.get('count')))
     for result in results:
         print(result['name'])
 

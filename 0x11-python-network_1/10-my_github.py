@@ -14,7 +14,10 @@ def main():
     passwd = argv[2]
     url = 'https://api.github.com/user'
     r = requests.get(url, auth=(user, passwd))
-    print(r.json()['id'])
+    try:
+        print(r.json()['id'])
+    except:
+        print(None)
 
 if __name__ == '__main__':
     main()
