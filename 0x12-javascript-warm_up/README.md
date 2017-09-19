@@ -13,10 +13,6 @@ The focus of this project is to learn:
 * how to affect values to variables
 * how to use while and for loops
 * how to use break and continue statements
-
-* what a function is and how do you use functions
-
-
 * how to return a function that does not use any return statement
 * what scope of variables are
 * what the arithmetic operators are and how to use them
