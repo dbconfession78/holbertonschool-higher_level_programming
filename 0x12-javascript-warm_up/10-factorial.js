@@ -1,9 +1,10 @@
 #!/usr/bin/node
-const n = parseInt(process.argv[2], 10);
-function fact (a) {
-  if (isNaN(a) || (a === 0)) {
+const num = process.argv.slice(2)[0];
+function fact(n) {
+  if (isNaN(n) || (n === 0)) {
     return 1;
   }
-  return a * fact(a - 1);
+  return n * fact(n - 1);
 }
-console.log(fact(n));
+
+console.log(fact(num));
