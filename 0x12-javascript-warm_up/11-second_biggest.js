@@ -8,7 +8,7 @@ for (let i = 0; i < args.length; i++) {
 
 let sec_biggest = function(list) {
   if (list.length <= 1) {
-    return (1);
+    return (0);
   }
   let max = Math.max.apply(Math, list);
   let newList = [];
