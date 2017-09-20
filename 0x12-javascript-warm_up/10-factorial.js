@@ -2,21 +2,11 @@
 const args = process.argv.slice(2);
 num = args[0];
 
-/*
-let fact = function(n) {
-  if (n == 0 || isNaN(n)) {
+function fact(n) {
+  if (isNaN(n) || n === 0) {
     return (1);
   }
-  return fact(n - 1) * n;
+  return (n * fact(n - 1));
 }
-*/
-
-function fact(n) {
-  if (n === 0 || isNaN(n)) {
-    return 1;
-  }
-  return fact(n - 1) * n;
-}
-
 
 console.log(fact(num));
