@@ -6,8 +6,8 @@ exports.Rectangle = function Rectangle(w, h) {
   }
 
   this.print = function() {
-    for (let i=0; i < this.height; i++) {
-      console.log('X'.repeat(this.width))
+    for (let i = 0; i < this.height; i += 1) {
+      console.log('X'.repeat(this.width));
     }
   };
 };
