@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // rectangle constructor
-exports.Rectangle = function Rectangle(w, h) {
+exports.Rectangle = function Rectangle (w, h) {
   if (w > 0 && h > 0) {
     this.width = w;
     this.height = h;
