@@ -8,7 +8,7 @@ exports.Square = function Square (size) {
 */
 
 function Square (size) {
-	Rectangle.call(this, size, size);
+  Rectangle.call(this, size, size);
 }
 
 exports.Square = Square;
