@@ -13,6 +13,6 @@ Square.prototype.charPrint = function (c = 'X') {
   for (let i = 0; i < this.height; i += 1) {
     console.log(c.repeat(this.width));
   }
-}
+};
 
 exports.Square = Square;
