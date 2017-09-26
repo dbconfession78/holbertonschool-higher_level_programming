@@ -1,13 +1,34 @@
 #!/usr/bin/node
-const oDict = require('./101-data').dict;
-let fDict = {};
+const oDict = require('./101-dict').dict;
+let list = [];
+let retval = {};
 
 for (let key in oDict) {
-  const count = oDict[key];
-  if (!(count in fDict)) {
-    fDict[count] = [key];
-  } else {
-    fDict[count].push(key);
+  const val = oDict[key];
+  if (contains(list, val) === false) {
+    list.push(val);
   }
 }
-console.log(fDict);
+list.sort();
+
+for (let i in list) {
+  let idList = [];
+  for (let key in oDict) {
+    const val = oDict[key];
+    if (val === list[i]) {
+      idList.push(key);
+    }
+  }
+  retval[list[i]] = idList;
+}
+console.log(retval);
+
+
+function contains (list, n) {
+  for (let i in list) {
+    if (list[i] === n) {
+      return true;
+    }
+  }
+  return false;
+}
