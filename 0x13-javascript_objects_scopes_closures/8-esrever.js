@@ -2,8 +2,8 @@
 // returns a reversed list based on the given list
 exports.esrever = function (list) {
   let retval = [];
-  for (let i = 0; i < list.length; i++) {
-    retval.push(list[list.length-i-1]);
+  for (let i  = list.length - 1; i >= 0; i--) {
+    retval.push(list[i]);
   }
   return retval;
 };
