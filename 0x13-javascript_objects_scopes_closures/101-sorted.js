@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const oDict = require('./101-main').dict;
+const oDict = require('./101-dict').dict;
 let list = [];
 retval = {};
 
