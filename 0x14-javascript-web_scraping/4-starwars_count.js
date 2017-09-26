@@ -11,9 +11,9 @@ request.get(url, function (err, response, body) {
     for (let i in results) {
       const characters = results[i]['characters'];
       for (let j in characters) {
-          if (characters[j].includes('18')) {
-            count += 1;
-          }
+        if (characters[j].includes('18')) {
+          count += 1;
+        }
       }
     }
   }
