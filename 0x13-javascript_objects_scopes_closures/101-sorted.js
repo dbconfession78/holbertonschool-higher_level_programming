@@ -9,7 +9,7 @@ for (let key in oDict) {
     list.push(val);
   }
 }
-
+list.sort();
 
 for (let i in list) {
   let idList = [];
