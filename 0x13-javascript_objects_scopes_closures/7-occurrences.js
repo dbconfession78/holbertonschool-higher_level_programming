@@ -1,11 +1,11 @@
 #!/usr/bin/node
 // counts the number of occurances in a list
-exports.nbOccurences = function (list, search_element) {
+exports.nbOccurences = function (list, searchElement) {
   let retval = 0;
-  for (let i = 0; i < list.length; i += 1) {
-    if (list[i] === search_element) {
-      retval += 1;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === searchElement) {
+      retval++;
     }
   }
-  return (retval);
+  return retval;
 };
