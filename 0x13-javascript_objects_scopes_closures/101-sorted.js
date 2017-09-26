@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const oDict = require('./101-dict').dict;
+const oDict = require('./101-data').dict;
 let fDict = {};
 
 for (let key in oDict) {
