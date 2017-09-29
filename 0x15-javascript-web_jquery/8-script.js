@@ -7,7 +7,7 @@ $.ajax({
   success: function (response) {
     const results = response.results;
     for (let i in results) {
-      $('ul').append('<li>' + results[i].title + '</li>');
+      $('UL#list_movies').append('<li>' + results[i].title + '</li>');
     }
   }
 });
