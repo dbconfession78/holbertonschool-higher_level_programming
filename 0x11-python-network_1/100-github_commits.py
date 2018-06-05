@@ -12,7 +12,7 @@ def main():
     repo = argv[1]
     owner = argv[2]
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
-    r = requests.get(url, auth=('dbconfession78', 'Hyrenkosa1'))
+    r = requests.get(url)
     results = r.json()
     for i, result in enumerate(results):
         if i < 10:
